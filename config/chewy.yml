@@ -1,0 +1,18 @@
+default: &default
+  host: <%= ENV['ELASTICSEARCH_HOST'] %>
+
+development:
+  <<: *default
+  prefix: 'development'
+
+test:
+  <<: *default
+  prefix: 'test'
+
+staging:
+  <<: *default
+  prefix: 'production'
+
+production:
+  <<: *default
+  prefix: 'production'
